@@ -97,7 +97,7 @@ module.exports = async function (source) {
             let moduleName;
 
             if (match.match(importSass)) {
-              importString = `@import ${fileName};`;
+              importString = `@import ${fileName}` + "\r\n";
             } else if (match.match(importModules)) {
               moduleName = obj + index;
               importString = `import * as ${moduleName} from ${fileName};`;
